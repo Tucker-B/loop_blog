@@ -12,12 +12,15 @@ Caution: It is in Japanese, so you may want to change various parts to suite you
 ### 必要なこと | Requirements
 ***
 
-The only requirement at the moment is for python 3.X.X to be installed. You can check this by running the following commands in terminal:
+The only requirement at the moment is for python 3.X.X & Django >= 1.10 to be installed. You can check this by running the following commands in terminal:
 
 `python -V`
 
 
 `python3 -V`
+
+
+`django-admin --version`
 
 
 ### 使い方 | Instructions
@@ -36,7 +39,7 @@ The only requirement at the moment is for python 3.X.X to be installed. You can 
 * If you need to generate your own key, you can do so by running the command below in terminal: 
 
 
-`python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'`
+`python3 -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'`
 
 > // Credit to Humberto Rocha
 
