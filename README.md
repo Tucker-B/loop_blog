@@ -6,7 +6,7 @@
 
 This web app is designed to be a basic CRUD blog. 
 
-Caution: It is in Japanese, so you may want to change various parts to suite your own language/needs.
+Caution: It is in Japanese, so you may want to change various parts to suit your own language/needs.
 
 
 ### 必要なこと | Requirements
