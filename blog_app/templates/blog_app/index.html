@@ -2,10 +2,21 @@
 {% load static %}
 
 {% block css_files %}
+    <link rel="stylesheet" href="{% static "blog_app/index.css" %}">
 {% endblock %}
 
 
 {% block content %}
     {% include "blog_app/partials/header.html" %}
-    <p>Hello World!</p>
+    <section id="welcome">
+        <h2 id="welcome__title">ループブログ</h2>
+    </section>
+    <section id="latest-posts" class="posts">
+        <ul>
+            {% include "blog_app/partials/post.html" %}
+            {% include "blog_app/partials/post.html" %}
+            {% include "blog_app/partials/post.html" %}
+        </ul>
+    </section>
+    </section>
 {% endblock %}

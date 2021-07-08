@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog_app/all-posts.css" %}">
+{% endblock %}
+
+{% block content %}
+    {% include "blog_app/partials/header.html" %}
+    <section id="all-posts">
+        <h2>ポスト達</h2>
+        <ul>
+            {% include "blog_app/partials/post.html" %}
+        </ul>
+    </section>
+{% endblock %}

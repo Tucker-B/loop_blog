@@ -1,19 +1,31 @@
 from django.http.response import HttpResponseNotFound
 from django.shortcuts import render
-from django.http import HttpResponseNotFound
+from django.http import HttpResponseNotFound, Http404
 # Create your views here.
+
+# posts [
+# ]
 
 def index(req):
     try:
         return render(req, "blog_app/index.html")
     except:
-        return HttpResponseNotFound("<h1>File or directory not found</h1>")
+        raise Http404("Something went wrong")
 
 def all_posts(req):
-    return render(req, "<h1>Some text goes here </h1>")
+    try:
+        return render(req, "blog_app/all-posts.html")
+    except:
+        raise Http404("Something went wrong")
 
-def specific_post(req):
-    return render(req, "<h1>Some text goes here </h1>")
+def specific_post(req, slug):
+    try:
+        return render(req, "blog_app/specific-post.html")
+    except:
+        raise Http404("Something went wrong")
 
-def specific_post_by_id(req):
-    return render(req, "<h1>Some text goes here </h1>")
+def specific_post_by_id(req, post_id):
+    try:
+        return render(req, "blog_app/specific-post.html")
+    except:
+        raise Http404("Something went wrong")
