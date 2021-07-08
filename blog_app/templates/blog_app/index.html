@@ -9,7 +9,7 @@
 {% block content %}
     {% include "blog_app/partials/header.html" %}
     <section id="welcome">
-        <h2 id="welcome__title">ループブログ</h2>
+        <h2 id="welcome__title"><span style="color: #766aad">ループ</span>ブログ</h2>
     </section>
     <section id="latest-posts" class="posts">
         <ul>
@@ -18,5 +18,5 @@
             {% include "blog_app/partials/post.html" %}
         </ul>
     </section>
-    </section>
+    {% include "blog_app/partials/footer.html" %}
 {% endblock %}

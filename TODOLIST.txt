@@ -1,0 +1,6 @@
+Hook up SQLite DB
+Create models, forms
+Configure admin
+
+Fix Footer Positioning
+Add Display: Grid & Flex to each page

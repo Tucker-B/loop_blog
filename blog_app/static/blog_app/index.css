@@ -1,27 +1,20 @@
+nav a:first-of-type {
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: rgb(138, 201, 235);
+}
+
+nav a:first-of-type:hover,
+nav a:first-of-type:active {
+    color: #766aad;
+}
+
 #welcome__title {
     font-size: 3rem;
-}
-
-ul {
-    list-style: none;
-    text-align: center;
-    
-}
-
-li {
-    border: 1px solid #EEEEEF;
-    border-radius: 0.8rem;
-    margin: 2rem 35%;
-    padding: 1rem 0;
 }
 
 li:not(:first-child) {
     display: inline-block;
     margin: 0 1rem;
     padding: 1rem 5rem;
-}
-
-.post a {
-    color: black;
-    text-decoration: none;
 }

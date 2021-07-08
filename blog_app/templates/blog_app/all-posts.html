@@ -7,10 +7,11 @@
 
 {% block content %}
     {% include "blog_app/partials/header.html" %}
-    <section id="all-posts">
+    <section id="all-posts" class="posts">
         <h2>ポスト達</h2>
         <ul>
             {% include "blog_app/partials/post.html" %}
         </ul>
     </section>
+    {% include "blog_app/partials/footer.html" %}
 {% endblock %}
