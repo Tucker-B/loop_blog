@@ -28,8 +28,11 @@ def all_posts(req):
         raise Http404("Something went wrong")
 
 def specific_post(req, slug):
+    post = Post.objects.get(slug=slug)
     try:
-        return render(req, "blog_app/specific-post.html")
+        return render(req, "blog_app/specific-post.html", {
+            "specific_post": post
+        })
     except:
         raise Http404("Something went wrong")
 

@@ -6,5 +6,17 @@
 
 {% block content %}
     {% include "blog_app/partials/header.html" %}
-    <hr>
+    <li>
+        <article class="post">
+            <a href="">
+                <img src="{% static "{{ specific_post.image_name}}"%}" alt="{{ specific_post.title }}">
+                <div class="post_content">
+                    <h3>{{ specific_post.title }}</h3>
+                    <img src="{% static "{{ specific_post.image_name}}"%}" alt="{{ specific_post.title }}">
+                    <p> {{ specific_post.content }}</p>
+                </div>
+            </a>
+        </article>
+    </li>
+    {% include "blog_app/partials/footer.html" %}
 {% endblock %}

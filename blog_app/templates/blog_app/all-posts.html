@@ -13,7 +13,7 @@
             {% for specific_post in posts %}
                 <li>
                     <article class="post">
-                        <a href="">
+                        <a href="{% url "specific-post" specific_post.slug %}">
                             <img src="{% static "{{ specific_post.image_name}}"%}" alt="{{ specific_post.title }}">
                             <div class="post_content">
                                 <h3>{{ specific_post.title }}</h3>
