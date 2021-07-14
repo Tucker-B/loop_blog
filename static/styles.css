@@ -7,12 +7,14 @@
 html {
     font-family: 'Kosugi Maru', sans-serif;
     height: 120vh;
-    z-index: 1;
+
 }
 
 body {
     background-color: #fcfcfc;
+    position: relative;
     margin: 0;
+    z-index: 1;
     /* height: 100vh; */
 }
 

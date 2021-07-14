@@ -4,6 +4,11 @@ nav a:nth-of-type(2) {
     text-decoration-color: rgb(138, 201, 235);
 }
 
+nav a:nth-of-type(2):hover,
+nav a:nth-of-type(2):active {
+    color: #766aad;
+}
+
 h2 {
     font-size: 2.5rem;
 }

@@ -1,4 +1,3 @@
-Hook up SQLite DB
 Create models, forms
 Configure admin
 
