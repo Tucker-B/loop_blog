@@ -6,16 +6,14 @@
 
 html {
     font-family: 'Kosugi Maru', sans-serif;
-    height: 120vh;
-
 }
 
 body {
     background-color: #fcfcfc;
+    height: 110vh;
     position: relative;
     margin: 0;
     z-index: 1;
-    /* height: 100vh; */
 }
 
 header {
@@ -64,6 +62,11 @@ h2 {
     text-align: center;
 }
 
+#all-posts,
+#latest-posts {
+    margin-bottom: 6rem;
+}
+
 ul {
     padding-left: 0;
     list-style: none;
@@ -99,6 +102,9 @@ li:hover {
 }
 
 footer {
-    margin-top: 6rem;
+    clear: both;
+    position: relative;
+    height: 4rem;
+    margin-top: -1rem;
     text-align: center;
 }
