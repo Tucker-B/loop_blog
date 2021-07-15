@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+{% endblock %}
+
+{% block content %}
+    {% include "blog_app/partials/header.html" %}
+
+    <h2>ロゲイン</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">ロゲイン</button>
+    </form>
+
+    {% include "blog_app/partials/footer.html" %}
+{% endblock %}
