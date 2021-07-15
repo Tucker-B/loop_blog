@@ -11,27 +11,33 @@ from .models import Post, Tag
 
 def index(req):
     posts = Post.objects.all().order_by("date")
+    imgHostUrl = "https://loopblog-images.s3.amazonaws.com/"
     try:
         return render(req, "blog_app/index.html", {
-            "posts": posts
+            "posts": posts,
+            "imgHostUrl": imgHostUrl
         })
     except:
         raise Http404("Something went wrong")
 
 def all_posts(req):
     posts = Post.objects.all().order_by("date")
+    imgHostUrl = "https://loopblog-images.s3.amazonaws.com/"
     try:
         return render(req, "blog_app/all-posts.html", {
-            "posts": posts
+            "posts": posts,
+            "imgHostUrl": imgHostUrl
         })
     except:
         raise Http404("Something went wrong")
 
 def specific_post(req, slug):
     post = Post.objects.get(slug=slug)
+    imgHostUrl = f"https://loopblog-images.s3.amazonaws.com/{post.image_name}"
     try:
         return render(req, "blog_app/specific-post.html", {
-            "specific_post": post
+            "specific_post": post,
+            "imgUrl": imgHostUrl
         })
     except:
         raise Http404("Something went wrong")
