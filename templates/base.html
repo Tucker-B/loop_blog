@@ -12,7 +12,8 @@
     {% endblock %}
 </head>
 <body>
-    {% block content %}
+    <a href="{% url "add-post" %}" id="add-post">+</a>
+    {% block content %}    
     {% endblock %}
     <script src="{% static "base_script.js" %}"></script>
 </body>

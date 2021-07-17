@@ -11,10 +11,10 @@ class Tag(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=50)
-    excerpt = models.CharField(max_length=50)
+    excerpt = models.CharField(max_length=100)
     content = models.TextField(max_length=1000)
     image_name = models.CharField(max_length=100)
-    date = models.DateField(auto_now=True)
+    date = models.DateTimeField(auto_now=True)
     tags = ManyToManyField(Tag)
     slug = models.SlugField(unique=True)
 

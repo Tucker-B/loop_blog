@@ -16,6 +16,15 @@ body {
     z-index: 1;
 }
 
+#add-post {
+    color: #8a7cce;
+    text-decoration: none;
+    font-size: 1.5rem;
+    position:fixed;
+    top: 1.5rem;
+    right: 1rem;
+}
+
 header {
     background-color: white;
     border-bottom: 1px solid #EEEEEF;
@@ -176,10 +185,6 @@ footer {
     .hamburger-button,
     header nav {
         display: block;
-    }
-
-    #welcome__title {
-        display: none;
     }
 
     li {

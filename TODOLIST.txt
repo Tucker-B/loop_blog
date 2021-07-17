@@ -1,3 +1,2 @@
-Make website mobile friendly
-Add post page (redirect to login page if not logged in)
+Add addPost page (redirect to login page if not logged in)
 Add Display: Grid & Flex to each page

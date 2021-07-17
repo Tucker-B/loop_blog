@@ -10,14 +10,14 @@
     <section id="all-posts" class="posts">
         <h2>ポスト達</h2>
         <ul>
-            {% for specific_post in posts %}
+            {% for post in posts %}
                 <li>
                     <article class="post">
-                        <a href="{% url "specific-post" specific_post.slug %}">
-                            <img src="{{imgHostUrl}}{{specific_post.image_name}}" alt="{{ specific_post.title }}">
+                        <a href="{% url 'all-posts'%}{{post.slug}}">
+                            <img src="{{imgHostUrl}}{{post.image_name}}" alt="{{ post.title }}">
                             <div class="post_content">
-                                <h3>{{ specific_post.title }}</h3>
-                                <p> {{ specific_post.excerpt }}</p>
+                                <h3>{{ post.title }}</h3>
+                                <p> {{ post.excerpt }}</p>
                             </div>
                         </a>
                     </article>
