@@ -23,6 +23,12 @@
                                 <h3>{{ post.title }}</h3>
                                 <p> {{ post.excerpt }}</p>
                             </div>
+                            <div id="posts__tags__div">
+                                {% for tag in post.tags.all %}
+                                    <span class="posts__tag">{{ tag }}</span>
+                                {% endfor %}
+                            </div>
+                            
                         </a>
                     </article>
                 </li>

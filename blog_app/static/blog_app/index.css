@@ -24,8 +24,8 @@ nav a:first-of-type:active {
 
 li:not(:first-child) {
     display: inline-block;
-    margin: 0 1rem;
-    padding: 1rem 5rem;
+    margin: 2rem 5%;
+    vertical-align: top;
 }
 
 @media(max-width: 590px) {
