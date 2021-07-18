@@ -3,9 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponseNotFound, Http404
 
 from .models import Post, Tag
-from .forms import PostForm
-
-import pdb;
+from .forms import PostForm, TagForm
 
 # Create your views here.
 
@@ -54,8 +52,8 @@ def specific_post_by_id(req, post_id):
 def add_post(req):
     if (req.method == 'POST'):
         form = PostForm(req.POST)
-        
-        if form.is_valid():
+
+        if (form.is_valid()):
             tags = form.cleaned_data['tags']
             post = Post(title=form.cleaned_data['title'], 
                 excerpt=form.cleaned_data['excerpt'], 
@@ -63,7 +61,7 @@ def add_post(req):
                 image_name=form.cleaned_data['image_name'])
             
             post.save()
-
+            
             for tag in tags:
                 post.tags.add(tag)
             
@@ -74,6 +72,25 @@ def add_post(req):
     try:
         return render(req, "blog_app/add-post.html", {
             "form": form
+        })
+    except:
+        raise Http404("Something went wrong") 
+
+def add_tag(req):
+
+    if (req.method == 'POST'):
+        tag_form = TagForm(req.POST)
+
+        if (tag_form.is_valid()):
+            tag_object = Tag(caption=tag_form.cleaned_data['caption'])
+            tag_object.save()
+            print(tag_form.cleaned_data)
+            return HttpResponseRedirect("/")
+    else:
+        tag_form = TagForm()
+    try:
+        return render(req, "blog_app/add-tag.html", {
+            "tag_form": tag_form
         })
     except:
         raise Http404("Something went wrong") 

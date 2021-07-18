@@ -2,6 +2,7 @@
 {% load static%}
 
 {% block css_files %}
+    <link rel="stylesheet" href="{% static "blog_app/add-post.css" %}">
 {% endblock %}
 
 {% block content %}
@@ -16,14 +17,14 @@
             <br>
             {{ form.content }}
             <br>
-            <p>{{ form.excerpt.label }}</p>
+            <p id="excerpt-label">{{ form.excerpt.label }}</p>
             {{ form.excerpt }}
             <br>
             <p>{{ form.image_name.label }}</p>
             {{ form.image_name }}
             <br>
-            <p>{{ form.tags.label }}</p>
-            {{ form.tags}}
+            <p id="form__tag-label">{{ form.tags.label }}</p> <a href="{% url "add-tag" %}" id="add-tag">Add</a>
+            {{ form.tags }}
             <button type="submit">送信</button>
         </form>
     {% else %}

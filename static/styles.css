@@ -161,7 +161,7 @@ li {
 }
 
 li:hover {
-    z-index: 20 !important;
+    z-index: 20;
     background-color: #766aad;
     border-color: #8a7cce;
     transform: scale(1.1);
@@ -179,15 +179,6 @@ footer {
 }
 
 @media (max-width: 1200px) {
-
-    li {
-        display: block !important;
-        padding: 0 !important;
-        padding-top: 1rem !important;
-        margin: 1.5rem auto !important;
-        width: 90%;
-        max-width: 100%;
-    }
 
     img {
         width: 200px;

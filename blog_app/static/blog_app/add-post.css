@@ -1,0 +1,88 @@
+/* form p {
+    text-align: center;
+} */
+
+form {
+    margin: 3rem 5rem 3rem 30%;
+}
+
+form p {
+    font-size: 2rem;
+}
+
+form textarea {
+    font-size: 1.25rem;
+    height: 400px;
+    width: 625px;
+}
+
+form > input {
+    width: 25%;
+    height: 2rem;
+    font-size: 1rem;
+}
+
+form > input,
+form textarea {
+    border: 1px solid rgb(138, 201, 235);
+    border-radius: 5px;
+}
+form > input:hover,
+form textarea:hover,
+form > input:focus,
+form textarea:focus,
+form > input:focus-visible,
+form textarea:focus-visible {
+    border-color:rgb(19, 223, 176) !important;
+}
+
+#excerpt-label + input{
+    width: 50%;
+}
+
+ul {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+li {
+    display: inline-block;
+    margin: 1rem 1rem;
+}
+
+#form__tag-label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#add-tag {
+    color: white;
+    background-color:#766aad;
+    border-radius: 10px;
+    padding: 0.5rem;
+    vertical-align: middle;
+}
+
+#add-tag:hover {
+    background-color:#5f4eac;
+    cursor: pointer;rgb(99, 82, 174)
+}
+
+form button {
+    background-image: linear-gradient(45deg, rgb(138, 201, 235), rgb(19, 223, 176));
+    border: 1px solid rgb(138, 201, 235);
+    box-shadow: 0 6px 19px rgb(22 10 28 / 30%);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    width: 25%;
+    transform: scale(1.0);
+    transition: ease-out 500ms transform;
+}
+
+form button:hover {
+    background-image: rgb(58, 145, 193);
+    transform: scale(1.1);
+}

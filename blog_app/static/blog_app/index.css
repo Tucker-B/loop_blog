@@ -28,6 +28,18 @@ li:not(:first-child) {
     vertical-align: top;
 }
 
+@media (max-width: 1200px) {
+
+    li {
+        display: block !important;
+        padding: 0 !important;
+        padding-top: 1rem !important;
+        margin: 1.5rem auto !important;
+        width: 90%;
+        max-width: 100%;
+    }
+}
+
 @media(max-width: 590px) {
     #welcome > p,
     #welcome__title {

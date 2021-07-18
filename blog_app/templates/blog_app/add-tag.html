@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+{% endblock %}
+
+{% block content %}
+    {% include "blog_app/partials/header.html" %}
+    {% if user.is_authenticated %}
+        <form action="/tags/add" method="POST">
+            {% csrf_token %}
+            {{ tag_form }}
+            <button type="submit">送信</button>
+        </form>
+    {% else %}
+        <p>You are not authorized.</p>
+    {% endif %}
+    {% include "blog_app/partials/footer.html" %}
+{% endblock %}

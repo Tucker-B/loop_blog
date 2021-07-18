@@ -1,2 +1,7 @@
-Add addPost page (redirect to login page if not logged in)
 Add Display: Grid & Flex to each page
+
+add functionality for adding new tags
+add update and delete functionality
+add search functionality
+add ability to sort by month and year
+add ability to see more posts after initial 10~
