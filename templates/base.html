@@ -12,7 +12,11 @@
     {% endblock %}
 </head>
 <body>
-    <a href="{% url "add-post" %}" id="add-post">+</a>
+    <a href="{% url "add-post" %}" id="add-post">
+        <svg class="index__icon">
+                <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-plus"></use>
+        </svg>
+    </a>
     {% block content %}    
     {% endblock %}
     <script src="{% static "base_script.js" %}"></script>

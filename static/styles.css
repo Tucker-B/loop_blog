@@ -10,10 +10,15 @@ html {
 
 body {
     background-color: #fcfcfc;
-    height: 110vh;
     position: relative;
     margin: 0;
     z-index: 1;
+    height: 110vh;
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
 
 #add-post {
@@ -105,6 +110,19 @@ h2 {
     margin-bottom: 6rem;
 }
 
+svg {
+    width: 1.3rem;
+    height: 1.3rem;
+    fill: #766aad;
+    vertical-align: top;
+}
+
+#nav__title-svg {
+    width: 2rem;
+    height: 2rem;
+    vertical-align: top;
+}
+
 img {
     width: 300px;
     height: 300px;
@@ -119,7 +137,7 @@ ul {
     text-align: center;
 }
 
-li {
+.posts__post {
     border: 1px solid #EEEEEF;
     border-radius: 0.8rem;
     box-shadow: 0 6px 19px rgb(22 10 28 / 30%);
@@ -160,7 +178,7 @@ li {
     
 }
 
-li:hover {
+.posts__post:hover {
     z-index: 20;
     background-color: #766aad;
     border-color: #8a7cce;
@@ -171,11 +189,33 @@ li:hover {
 }
 
 footer {
+    background-color: #766aad;
+    color: black;
     clear: both;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     position: relative;
-    height: 4rem;
     margin-top: -1rem;
     text-align: center;
+}
+
+footer li {
+    display: inline-block;
+    margin: 0.5rem 1rem;
+}
+
+footer h3,
+footer a {
+    color: white;
+}
+
+footer svg {
+    fill: white;
+    vertical-align: bottom;
+}
+
+footer a:hover {
+    color:rgb(138, 201, 235);
 }
 
 @media (max-width: 1200px) {

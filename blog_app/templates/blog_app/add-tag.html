@@ -2,18 +2,22 @@
 {% load static %}
 
 {% block css_files %}
+    <link rel="stylesheet" href="{% static "blog_app/add-post.css" %}">
 {% endblock %}
 
 {% block content %}
     {% include "blog_app/partials/header.html" %}
-    {% if user.is_authenticated %}
+    <div id="container">
+        {% if user.is_authenticated %}
         <form action="/tags/add" method="POST">
             {% csrf_token %}
             {{ tag_form }}
             <button type="submit">送信</button>
         </form>
-    {% else %}
-        <p>You are not authorized.</p>
-    {% endif %}
+        {% else %}
+            <p>You are not authorized.</p>
+        {% endif %}
+    </div>
+    
     {% include "blog_app/partials/footer.html" %}
 {% endblock %}

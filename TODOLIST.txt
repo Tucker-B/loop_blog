@@ -1,7 +1,7 @@
 Add Display: Grid & Flex to each page
 
-add functionality for adding new tags
 add update and delete functionality
 add search functionality
 add ability to sort by month and year
 add ability to see more posts after initial 10~
+update each post to have entirety of li to be a link instead of just img and p

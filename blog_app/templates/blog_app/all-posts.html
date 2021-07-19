@@ -9,9 +9,9 @@
     {% include "blog_app/partials/header.html" %}
     <section id="all-posts" class="posts">
         <h2>ポスト達</h2>
-        <ul>
+        <ul class="posts__ul">
             {% for post in posts %}
-                <li>
+                <li class="posts__post">
                     <article class="post">
                         <a href="{% url 'all-posts'%}{{post.slug}}">
                             <img src="{{imgHostUrl}}{{post.image_name}}" alt="{{ post.title }}">

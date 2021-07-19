@@ -7,31 +7,59 @@
 
 {% block content %}
     {% include "blog_app/partials/header.html" %}
-    {% if user.is_authenticated %}
-        <form action="/posts/add" method="POST">
-            {% csrf_token %}
-            <p>{{ form.title.label }}</p>
-            {{ form.title }}
-            <br>
-            <p>{{ form.content.label }}</p>
-            <br>
-            {{ form.content }}
-            <br>
-            <p id="excerpt-label">{{ form.excerpt.label }}</p>
-            {{ form.excerpt }}
-            <br>
-            <p>{{ form.image_name.label }}</p>
-            {{ form.image_name }}
-            <br>
-            <p id="form__tag-label">{{ form.tags.label }}</p> <a href="{% url "add-tag" %}" id="add-tag">Add</a>
-            {{ form.tags }}
-            <button type="submit">送信</button>
-        </form>
-    {% else %}
-        <p>You are not authorized to post.</p>
-        <a href="{% url "login" %}"></a>
-    {% endif %}
-    
-
+    <div id="contaiber">
+        {% if user.is_authenticated %}
+            <form action="/posts/add" method="POST">
+                {% csrf_token %}
+                <p>
+                    <svg class="index__icon">
+                        <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-blog"></use>
+                    </svg>
+                    {{ form.title.label }}
+                </p>
+                {{ form.title }}
+                <br>
+                <p>
+                    <svg class="index__icon">
+                        <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-pen"></use>
+                    </svg>
+                    {{ form.content.label }}
+                </p>
+                <br>
+                {{ form.content }}
+                <br>
+                <p id="excerpt-label">
+                    <svg class="index__icon">
+                        <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-quotes-left"></use>
+                    </svg>
+                    {{ form.excerpt.label }}
+                </p>
+                {{ form.excerpt }}
+                <br>
+                <p>
+                    <svg class="index__icon">
+                        <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-image"></use>
+                    </svg>
+                    {{ form.image_name.label }}
+                </p>
+                {{ form.image_name }}
+                <br>
+                <p id="form__tag-label">
+                    <svg class="index__icon">
+                        <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-price-tags"></use>
+                    </svg>
+                    {{ form.tags.label }}
+                </p> <a href="{% url "add-tag" %}" id="add-tag">Add</a>
+                {{ form.tags.errors }}
+                <div class="tag-div">
+                    {{ form.tags }}
+                </div>
+                <button type="submit">送信</button>
+            </form>
+        {% else %}
+            <p>You are not authorized to post.</p>
+            <a href="{% url "login" %}"></a>
+        {% endif %}
+    </div>
     {% include "blog_app/partials/footer.html" %}
 {% endblock %}

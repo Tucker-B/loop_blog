@@ -1,11 +1,33 @@
+{% load static %}
+
 <header id="main-navigation">
-    <h1>
-        <a href="{% url "index" %}"><span style="color: #766aad">ループ</span>ブログ</a>
+    <h1 id="nav__title">
+        <a href="{% url "index" %}">
+            <svg class="index__icon" id="nav__title-svg">
+                <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-spinner9"></use>
+            </svg>
+            <span style="color: #766aad">ループ</span>ブログ
+        </a>
     </h1>
     <nav>
-        <a href="{% url "index" %}">ホーム</a>
-        <a href="{% url "all-posts" %}">ポスト達</a>
-        <a href="http://tuckerbarton.dev">アバウト</a>
+        <a href="{% url "index" %}">
+            <svg class="index__icon">
+                <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-home"></use>
+            </svg>
+            ホーム
+        </a>
+        <a href="{% url "all-posts" %}">
+        <svg class="index__icon">
+                <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-blog"></use>
+            </svg>
+            ポスト達
+        </a>
+        <a href="http://tuckerbarton.dev">
+        <svg class="index__icon">
+                <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-profile"></use>
+            </svg>
+            アバウト
+        </a>
         <button class="hamburger-button">
             <span class="hamburger-button__bar"></span>
             <span class="hamburger-button__bar"></span>
