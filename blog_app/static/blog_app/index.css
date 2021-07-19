@@ -22,7 +22,7 @@ nav a:first-of-type:active {
     font-size: 3rem;
 }
 
-#posts__post:not(:first-child) {
+.posts__post:not(:first-child) {
     display: inline-block;
     margin: 2rem 5%;
     vertical-align: top;
@@ -30,7 +30,7 @@ nav a:first-of-type:active {
 
 @media (max-width: 1200px) {
 
-    #posts__post {
+    .posts__post {
         display: block !important;
         padding: 0 !important;
         padding-top: 1rem !important;
