@@ -79,6 +79,15 @@ def specific_post_update(req, slug):
     except:
         raise Http404("Something went wrong")
 
+def specific_post_delete(req, slug):
+    try:
+        post = Post.objects.get(slug=slug)
+        post.delete()
+        return HttpResponseRedirect("/")
+
+    except:
+        raise Http404("Something went wrong")
+
 def specific_post_by_id(req, post_id):
     try:
         return render(req, "blog_app/specific-post.html")

@@ -25,6 +25,65 @@ a {
     text-decoration: none;
 }
 
+#modal {
+    display: none;
+    background-color: rgba(0,0,0,0.3);
+    width: 100vw;
+    height: 200vh;
+    position: absolute;
+    z-index: 100;
+}
+
+#modal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    background-color: #766aad;
+    border-radius: 10px;
+    color: white;
+    padding: 2rem;
+    top: 20%;
+    left: 50%;
+    z-index: 101;
+}
+
+#modal-box > span {
+    margin-bottom: 0.75rem;
+}
+
+#modal-box__options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.75rem;
+    width: 100%;
+}
+
+#modal-box__yes {
+    background-color: #ee2828;
+}
+
+#modal-box__yes:hover {
+    background-color: #b62929;
+}
+
+#modal-box__no {
+    background-color: rgb(138, 201, 235);
+}
+
+#modal-box__no:hover {
+    background-color: rgb(79, 152, 191);
+}
+
+#modal-box__yes,
+#modal-box__no {
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0.75rem;
+}
+
 #add-post {
     color: #8a7cce;
     text-decoration: none;

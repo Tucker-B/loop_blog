@@ -8,6 +8,7 @@
 
 {% block content %}
     {% include "blog_app/partials/header.html" %}
+    
     <div id="container">
         <section id="welcome">
         <p>タッカー<span style="color: #766aad">の</span></p>
@@ -16,15 +17,19 @@
         <section id="latest-posts" class="posts">
             <ul id="posts__ul">
                 {% for post in posts %}
-                    <li class="posts__post">
+                    <li class="posts__post" id="{{post.slug}}">
                         <article class="post" id="post-{{post.id}}">
                             <div class="posts__buttons">
-                                <svg class="index__icon posts__buttons__update">
-                                    <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-info"></use>
-                                </svg>
-                                <svg class="index__icon posts__buttons__delete">
-                                    <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-cancel-circle"></use>
-                                </svg>
+                                <a href="{% url 'all-posts'%}{{post.slug}}/update">
+                                    <svg class="index__icon posts__buttons__update">
+                                        <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-info"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="index__icon posts__buttons__delete">
+                                        <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-cancel-circle"></use>
+                                    </svg>
+                                </a>
                             </div>
                             <a href="{% url 'all-posts'%}{{post.slug}}">
                                 <img src="{{imgHostUrl}}{{post.image_name}}" alt="{{ post.title }}">
@@ -47,4 +52,6 @@
     </div>
     
     {% include "blog_app/partials/footer.html" %}
+    <script src="{% static "show-svg-buttons.js" %}"></script>
+    <script src="{% static "delete-post.js" %}"></script>
 {% endblock %}

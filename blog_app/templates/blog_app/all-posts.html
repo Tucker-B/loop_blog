@@ -11,16 +11,20 @@
         <h2>ポスト達</h2>
         <ul class="posts__ul">
             {% for post in posts %}
-                <li class="posts__post">
-                    <div class="posts__buttons">
-                        <svg class="index__icon">
-                            <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-blog"></use>
-                        </svg>
-                        <svg class="index__icon">
-                            <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-blog"></use>
-                        </svg>
+                <li class="posts__post" id="{{post.slug}}">
+                    <article class="post" id="post-{{post.id}}">
+                        <div class="posts__buttons">
+                            <a href="{% url 'all-posts'%}{{post.slug}}/update">
+                                <svg class="index__icon posts__buttons__update">
+                                    <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-info"></use>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg class="index__icon posts__buttons__delete">
+                                    <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-cancel-circle"></use>
+                                </svg>
+                            </a>
                         </div>
-                    <article class="post">
                         <a href="{% url 'all-posts'%}{{post.slug}}">
                             <img src="{{imgHostUrl}}{{post.image_name}}" alt="{{ post.title }}">
                             <div class="post_content">
@@ -39,4 +43,6 @@
             {% endfor %}
     </section>
     {% include "blog_app/partials/footer.html" %}
+    <script src="{% static "show-svg-buttons.js" %}"></script>
+    <script src="{% static "delete-post.js" %}"></script>
 {% endblock %}
