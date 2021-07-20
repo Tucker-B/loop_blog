@@ -1,13 +1,33 @@
+
+#container {
+    flex-grow: 1;
+    padding: 2rem 20%;
+    padding-top: 0;
+}
+
+.post_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 ul {
     list-style: none;
 }
 
-h3 {
-    margin-left: 1rem;
-    margin-right: 1rem;
+.post_content > h3 {
+    font-size: 3rem;    
 }
 
-p {
-    margin: 3rem;
-    font-size: 1.2rem;
+.post_content__entry-meta {
+    margin-bottom: 2rem;
 }
+
+#post_content__p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin: 3rem;
+}
+
+

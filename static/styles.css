@@ -10,10 +10,14 @@ html {
 
 body {
     background-color: #fcfcfc;
+    display: flex;
+    flex-direction: column;
     position: relative;
     margin: 0;
     z-index: 1;
-    height: 110vh;
+    height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -33,6 +37,9 @@ a {
 header {
     background-color: white;
     border-bottom: 1px solid #EEEEEF;
+    display: flex;
+    flex-direction: row;
+    
     text-align: left;
 }
 
@@ -51,9 +58,17 @@ header h1 a:active {
     color: #766aad;
 }
 
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+
 header h1,
 header nav {
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .hamburger-button {
@@ -88,7 +103,7 @@ header nav {
 nav a {
     color: #6d6e71;
     font-size: 1.5rem;
-    padding-left: 5rem;
+    /* padding-left: 5rem; */
 } 
 nav a:hover,
 nav a:active {
@@ -192,6 +207,8 @@ footer {
     background-color: #766aad;
     color: black;
     clear: both;
+    display: flex;
+    flex-direction: column;
     padding-top: 1rem;
     padding-bottom: 1rem;
     position: relative;
@@ -199,8 +216,13 @@ footer {
     text-align: center;
 }
 
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 footer li {
-    display: inline-block;
     margin: 0.5rem 1rem;
 }
 
@@ -238,6 +260,20 @@ footer a:hover {
 }
 
 @media (max-width: 1000px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        padding-left: 0;
+    }
+
+    nav {
+        width: 70%;
+    }
+
     img {
         width: 150px;
         height: 120px;
@@ -253,6 +289,8 @@ footer a:hover {
 }
 
 @media(max-width: 590px) {
+
+
 
     header > h1 {
         display: block;
@@ -290,6 +328,14 @@ footer a:hover {
 }
 
 @media (max-width: 450px) {
+
+    #nav__title {
+        font-size: 1.5rem;
+    }
+
+    #nav__title-svg {
+        display: none;
+    }
 
     p {
         font-size: 0.75rem;
