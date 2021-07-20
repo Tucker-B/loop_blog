@@ -6,7 +6,7 @@ class PostForm(forms.Form):
     excerpt = forms.CharField(label="抜粋",max_length=105)
     content = forms.CharField(label="内容", widget=forms.Textarea, max_length=1000)
     image_name = forms.CharField(label="イメージ名",max_length=100)
-    tags = forms.ModelMultipleChoiceField(widget=forms.CheckboxSelectMultiple, queryset = Tag.objects.all())
+    tags = forms.ModelMultipleChoiceField(widget=forms.CheckboxSelectMultiple, queryset = Tag.objects.all().order_by('caption'))
 
     def clean_tags(self):
         value = self.cleaned_data['tags']

@@ -24,10 +24,20 @@ ul {
     margin-bottom: 2rem;
 }
 
+.span-purple-coloring {
+    color: #766aad;
+}
+
 #post_content__p {
     font-size: 1.2rem;
     line-height: 2rem;
     margin: 3rem;
+}
+
+@media (max-width: 650px) {
+    #post_content__p {
+        width: 100%;
+    }
 }
 
 

@@ -41,6 +41,13 @@ form textarea:focus-visible {
     width: 50%;
 }
 
+#id_tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
 .tag-div ul {
     margin-bottom: 2rem;
     text-align: left;
@@ -48,7 +55,20 @@ form textarea:focus-visible {
 
 .tag-div li {
     display: inline-block;
+    background-color: rgb(138, 201, 235);
+    border: 1px solid transparent;
+    border-radius: 5px;    
+    color: black;
+    padding: 0.5rem;
     margin: 1rem 1rem;
+}
+
+.tag-div li:hover,
+.tag-div label:hover,
+.tag-div input:hover {
+    background-color: #766aad;
+    color: white;
+    cursor: pointer;
 }
 
 #form__tag-label {
@@ -74,6 +94,7 @@ form button {
     border-width: 0;
     box-shadow: 0 6px 19px rgb(22 10 28 / 30%);
     border-radius: 10px;
+    color: white;
     cursor: pointer;
     font-size: 1.5rem;
     padding-top: 0.25rem;
