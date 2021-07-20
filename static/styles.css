@@ -114,6 +114,10 @@ header h1 a {
     text-decoration: none;
 }
 
+#container {
+    flex-grow: 1;
+}
+
 h2 {
     font-weight: bolder;
     text-align: center;
@@ -148,6 +152,37 @@ ul {
     padding-left: 0;
     list-style: none;
     text-align: center;
+}
+
+.posts__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.posts__buttons svg {
+    visibility: hidden;
+    margin-left: 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.posts__buttons__update {
+    cursor: pointer;
+    fill: #baba2e;
+}
+
+.posts__buttons__update:hover {
+    fill: #a0a02b;
+}
+
+.posts__buttons__delete {
+    cursor: pointer;
+    fill: #ee2828;
+}
+
+.posts__buttons__delete:hover {
+    fill: #b03030;
 }
 
 .posts__post {
@@ -190,7 +225,6 @@ ul {
     transform: scale(1.1);
     transition: transform 200ms ease-out, background-color 200ms ease-out,
     border-color 200ms ease-out;
-
 }
 
 .posts__tags__div {
@@ -248,6 +282,10 @@ footer a:hover {
         width: 200px;
         height: 150px;
         border-radius: 10%;
+    }
+
+    .posts__buttons {
+        margin-right: 0.75rem;
     }
 
     .post_content p {

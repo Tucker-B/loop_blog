@@ -43,6 +43,42 @@ def specific_post(req, slug):
     except:
         raise Http404("Something went wrong")
 
+def specific_post_update(req, slug):
+    post = Post.objects.get(slug=slug)
+    
+    if (req.method == 'POST'):
+        form = PostForm(req.POST)
+
+        if (form.is_valid()):
+            tags = form.cleaned_data['tags']
+            post.title = form.cleaned_data['title']
+            post.excerpt = form.cleaned_data['excerpt']
+            post.content = form.cleaned_data['content']
+            post.image_name = form.cleaned_data['image_name']
+            
+            post.save()
+            
+            for tag in tags:
+                post.tags.add(tag)
+            
+            print(form.cleaned_data)
+            return HttpResponseRedirect("/")
+    else:
+        form = PostForm(initial={
+            'title': f"{post.title}",
+            'excerpt': f"{post.excerpt}",
+            'content': f"{post.content}",
+            'image_name': f"{post.image_name}",
+            'tags': list(post.tags.all())
+        })
+    try:
+        return render(req, "blog_app/update-post.html", {
+            "post": post,
+            "form": form
+        })
+    except:
+        raise Http404("Something went wrong")
+
 def specific_post_by_id(req, post_id):
     try:
         return render(req, "blog_app/specific-post.html")

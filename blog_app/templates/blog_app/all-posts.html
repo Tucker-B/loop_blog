@@ -12,6 +12,14 @@
         <ul class="posts__ul">
             {% for post in posts %}
                 <li class="posts__post">
+                    <div class="posts__buttons">
+                        <svg class="index__icon">
+                            <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-blog"></use>
+                        </svg>
+                        <svg class="index__icon">
+                            <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-blog"></use>
+                        </svg>
+                        </div>
                     <article class="post">
                         <a href="{% url 'all-posts'%}{{post.slug}}">
                             <img src="{{imgHostUrl}}{{post.image_name}}" alt="{{ post.title }}">
