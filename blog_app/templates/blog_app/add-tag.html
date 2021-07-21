@@ -9,7 +9,7 @@
     {% include "blog_app/partials/header.html" %}
     <div id="container">
         {% if user.is_authenticated %}
-        <form action="/tags/add" method="POST">
+        <form action="/tags/add" method="POST"  id="post-form">
             {% csrf_token %}
             {{ tag_form }}
             <button type="submit">送信</button>

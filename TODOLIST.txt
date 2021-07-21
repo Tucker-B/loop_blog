@@ -1,3 +1,8 @@
-add search functionality
 add ability to sort by month and year
 add ability to see more posts after initial 10~
+
+change styling for li elements on search page to be smaller, more compact
+add flexbox for said li elements on search page
+
+add date to li elements on index, all-posts
+add categories for tags & associated colors

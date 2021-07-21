@@ -1,39 +1,39 @@
-form {
+#post-form {
     margin: 3rem 5rem 3rem 30%;
 }
 
-form p {
+#post-form p {
     font-size: 2rem;
 }
 
-form svg {
+#post-form svg {
     width: 2.2rem;
     height: 2.2rem;
 }
 
-form textarea {
+#post-form textarea {
     font-size: 1.25rem;
     height: 400px;
     width: 625px;
 }
 
-form > input {
+#post-form > input {
     width: 25%;
     height: 2rem;
     font-size: 1rem;
 }
 
-form > input,
-form textarea {
+#post-form > input,
+#post-form textarea {
     border: 1px solid rgb(138, 201, 235);
     border-radius: 5px;
 }
-form > input:hover,
-form textarea:hover,
-form > input:focus,
-form textarea:focus,
-form > input:focus-visible,
-form textarea:focus-visible {
+#post-form > input:hover,
+#post-form textarea:hover,
+#post-form > input:focus,
+#post-form textarea:focus,
+#post-form > input:focus-visible,
+#post-form textarea:focus-visible {
     border-color:rgb(19, 223, 176) !important;
 }
 
@@ -89,7 +89,7 @@ form textarea:focus-visible {
     cursor: pointer;
 }
 
-form button {
+#post-form button {
     background-image: linear-gradient(45deg, rgb(138, 201, 235), #766aad);
     border-width: 0;
     box-shadow: 0 6px 19px rgb(22 10 28 / 30%);
@@ -104,7 +104,7 @@ form button {
     transition: ease-out 500ms transform;
 }
 
-form button:hover {
+#post-form button:hover {
     background-image: rgb(58, 145, 193);
     transform: scale(1.1);
 }

@@ -9,7 +9,7 @@
     {% include "blog_app/partials/header.html" %}
     <div id="container">
         {% if user.is_authenticated %}
-            <form action="/posts/add" method="POST">
+            <form action="/posts/add" method="POST" id="post-form">
                 {% csrf_token %}
                 <p>
                     <svg class="index__icon">
