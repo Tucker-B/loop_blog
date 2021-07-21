@@ -145,7 +145,7 @@ def search(req):
     
     slug = str(req.GET.get('title'))
     posts = Post.objects.filter(title__icontains=slug)
-
+    
     try:
         return render(req, "blog_app/post-search.html", {
             "posts": posts,
