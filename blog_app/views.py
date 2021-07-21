@@ -139,3 +139,17 @@ def add_tag(req):
         })
     except:
         raise Http404("Something went wrong") 
+
+def search(req):
+    imgHostUrl = "https://loopblog-images.s3.amazonaws.com/"
+    
+    slug = str(req.GET.get('title'))
+    posts = Post.objects.filter(title__icontains=slug)
+
+    try:
+        return render(req, "blog_app/post-search.html", {
+            "posts": posts,
+            "imgHostUrl": imgHostUrl
+        })
+    except:
+        raise Http404("Something went wrong")

@@ -28,6 +28,15 @@
             </svg>
             アバウト
         </a>
+        <form action="/search/" class="search" method="GET">
+            <input name="title" type="text" class="search__input" placeholder="ポストを検索">
+            <button class="search__button">
+                <svg class="search__icon">
+                    <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-search"></use>
+                </svg>
+            </button>
+        </form>
+
         <button class="hamburger-button">
             <span class="hamburger-button__bar"></span>
             <span class="hamburger-button__bar"></span>

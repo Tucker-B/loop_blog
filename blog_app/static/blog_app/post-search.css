@@ -1,0 +1,13 @@
+.posts__post {
+    flex-grow: 1;
+}
+
+li {
+    list-style: none;
+}
+
+.post > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
