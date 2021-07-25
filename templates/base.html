@@ -17,19 +17,19 @@
                 <use xlink:href="{% static "blog_app/images/sprite.svg" %}#icon-plus"></use>
         </svg>
     </a>
-
-    <div id="modal">
-        <div id="modal-box">
-            <span>本気ですか</span>
-            <div id="modal-box__options">
-                <a href="{% url 'all-posts'%}{{post.slug}}delete">
-                    <span id="modal-box__yes">はい</span>
-                </a>
-                <span id="modal-box__no">いいえ</span>
+    {% if user.is_authenticated %}
+        <div id="modal">
+            <div id="modal-box">
+                <span>本気ですか</span>
+                <div id="modal-box__options">
+                    <a href="{% url 'all-posts'%}{{post.slug}}delete">
+                        <span id="modal-box__yes">はい</span>
+                    </a>
+                    <span id="modal-box__no">いいえ</span>
+                </div>
             </div>
         </div>
-    </div>
-    
+    {% endif %}
     {% block content %}    
     {% endblock %}
     <script src="{% static "base_script.js" %}"></script>

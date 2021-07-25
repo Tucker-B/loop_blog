@@ -90,7 +90,7 @@
 }
 
 #post-form button {
-    background-image: linear-gradient(45deg, rgb(138, 201, 235), #766aad);
+    background-image: linear-gradient(-20deg, #766aad, #8ac9eb);
     border-width: 0;
     box-shadow: 0 6px 19px rgb(22 10 28 / 30%);
     border-radius: 10px;
@@ -101,7 +101,7 @@
     padding-bottom: 0.25rem;
     width: 25%;
     transform: scale(1.0);
-    transition: ease-out 500ms transform;
+    transition: ease-out 200ms transform;
 }
 
 #post-form button:hover {

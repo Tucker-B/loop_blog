@@ -39,7 +39,7 @@ a {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    background-color: #766aad;
+    background-image: linear-gradient(-45deg, #766aad, #8ac9eb);
     border-radius: 10px;
     color: white;
     padding: 2rem;
@@ -94,11 +94,10 @@ a {
 }
 
 header {
-    background-color: white;
-    border-bottom: 1px solid #EEEEEF;
+    background-image: linear-gradient(-45deg, #766aad7a, #8ac9eb70);
+    box-shadow: 0 1px 19px rgb(22 10 28 / 30%);
     display: flex;
     flex-direction: row;
-    
     text-align: left;
 }
 
@@ -144,7 +143,6 @@ header h1 a {
 
 .search {
     display: flex;
-    border: 1px solid #766aad;
     border-radius: 10px;
     margin-left: 1rem;
     transform: scale(1.0);
@@ -190,18 +188,15 @@ header h1 a {
     left: 0;
     top: 1rem;
     width: 3rem;
-    background-color:#8a7cce;
+    background-image: linear-gradient(-45deg, #766aad80, #8ac9eb80);
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
     margin-left: 1rem;
     margin-bottom: 1rem;
     vertical-align: middle;
-}
-
-.hamburger-button:hover {
-    background-color:#766aad;
 }
 
 .hamburger-button__bar {
@@ -255,10 +250,12 @@ ul {
 
 .posts__buttons {
     position: absolute;
+    top: 2%;
     right: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    z-index: 200;
 }
 
 .posts__buttons svg {
@@ -287,22 +284,43 @@ ul {
 }
 
 .posts__post {
-    border: 1px solid #EEEEEF;
     border-radius: 0.8rem;
     box-shadow: 0 6px 19px rgb(22 10 28 / 30%);
-    background-color: white;
+    background-image: linear-gradient(-45deg, #766aad7a, #8ac9eb70);
+    cursor: pointer;
     margin: 2rem 35%;
-    padding: 1rem 2rem;
     z-index: 10;
     transform: scale(1);
-    transition: transform 200ms ease-out, background-color 200ms ease-out,
-    border-color 200ms ease-out;
+    transition: transform 200ms ease-out;
+    width: 30%;
     max-width: 30%;
     
 }
 
-.post_content p {
+.post__link {
+    padding: 1rem 2rem;
+}
+
+.post_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.post_content p:not(.post_content__date) {
+    color: #6d6e71;
     line-height: 1.5rem;
+}
+
+.post_content__date {
+    align-self: flex-end;
+    color: white;
+    margin-top: 0;
+}
+
+.post {
+    padding: 0 2rem;
 }
 
 .post a {
@@ -316,16 +334,13 @@ ul {
     box-shadow: 0 6px 19px rgb(22 10 28 / 30%);
     background: rgb(138, 201, 235);
     padding: 0.5rem;
-    
+    margin-bottom: 1rem;
 }
 
 .posts__post:hover {
     z-index: 20;
-    background-color: #766aad;
-    border-color: #8a7cce;
     transform: scale(1.1);
-    transition: transform 200ms ease-out, background-color 200ms ease-out,
-    border-color 200ms ease-out;
+    transition: transform 200ms ease-out;
 }
 
 .posts__tags__div {
@@ -340,8 +355,12 @@ ul {
     margin-right: 1rem;
 }
 
+.span-purple-coloring {
+    color: #766aad;
+}
+
 footer {
-    background-color: #766aad;
+    background-image: linear-gradient(-45deg, #766aad7a, #8ac9eb70);
     color: black;
     clear: both;
     display: flex;
@@ -420,6 +439,7 @@ footer a:hover {
 
     nav {
         width: 70%;
+        margin-bottom: 1.5rem;
     }
 
     img {
@@ -443,6 +463,10 @@ footer a:hover {
         display: block;
         text-align: center;
         padding-left: 0;
+    }
+
+    nav {
+        margin-bottom: 0;
     }
 
     nav > a {
@@ -479,6 +503,14 @@ footer a:hover {
 }
 
 @media (max-width: 450px) {
+
+    #add-post {
+        top: 1rem;
+    }
+
+    .hamburger-button {
+        top: 0.7rem;
+    }
 
     #nav__title {
         font-size: 1.5rem;

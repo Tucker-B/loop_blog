@@ -24,11 +24,8 @@ ul {
     margin-bottom: 2rem;
 }
 
-.span-purple-coloring {
-    color: #766aad;
-}
-
 #post_content__p {
+    color: black;
     font-size: 1.2rem;
     line-height: 2rem;
     margin: 3rem;

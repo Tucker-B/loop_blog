@@ -1,8 +1,8 @@
-let posts_li_elements_one = document.querySelectorAll(".post");
+let posts_li_elements_two = document.querySelectorAll(".posts__post");
 
-posts_li_elements_one.forEach((li_element) => {
+posts_li_elements_two.forEach((li_element) => {
     li_id = li_element.id;
-    let svg_button = document.querySelector(`#${li_id} a:last-of-type`);
+    let svg_button = document.querySelector(`#${li_id} .posts__buttons a:last-of-type`);
     svg_button.addEventListener('click', () => {
         let modal_element = document.querySelector('#modal');
         modal_element.style.display = 'block';
@@ -11,7 +11,7 @@ posts_li_elements_one.forEach((li_element) => {
 
         let modal_box_yes_element_a = modal_box_yes_element.parentElement;
 
-        let li_slug_id = li_element.parentElement.id;
+        let li_slug_id = li_element.id;
         
         // CHANGE HARDCODED ADDRESS FOR DEPLOYMENT
         modal_box_yes_element_a['href'] = `http://127.0.0.1:8000/posts/${li_slug_id}/delete`;

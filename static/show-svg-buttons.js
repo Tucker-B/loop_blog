@@ -1,4 +1,4 @@
-let posts_li_elements = document.querySelectorAll(".post");
+let posts_li_elements = document.querySelectorAll(".posts__post");
 let posts_buttons_svgs = document.querySelectorAll(".posts__buttons svg");
 
 posts_li_elements.forEach((li_element) => {
@@ -16,7 +16,6 @@ posts_li_elements.forEach((li_element) => {
                 button_svg.style.visibility = "hidden";
             }
         });
-
     })
     
     li_element.addEventListener('mouseout', () => {
