@@ -1,4 +1,8 @@
 # ループブログ | Loop Blog
+
+<img src="https://loopblog-images.s3.amazonaws.com/screencapture-loopblog.png"
+     alt="Picture of Website" />
+
 ### 概要 | Overview
 ***
 
