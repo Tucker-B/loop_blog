@@ -57,6 +57,8 @@ def specific_post_update(req, slug):
             post.image_name = form.cleaned_data['image_name']
             
             post.save()
+
+            post.tags.clear()
             
             for tag in tags:
                 post.tags.add(tag)
