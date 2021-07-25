@@ -2,6 +2,8 @@
     flex-grow: 1;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
 }
 
 .posts__div li {
@@ -10,10 +12,15 @@
 
 .posts__post {
     flex-grow: 1;
+    width: 100%;
     max-width: 100%;
-    box-shadow: none;
     transform: none;
     transition: none;
+}
+
+.posts__div li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .posts__post:hover {

@@ -308,6 +308,10 @@ ul {
     width: 100%;
 }
 
+.post_content h3 {
+    font-size: 1.6rem;
+}
+
 .post_content p:not(.post_content__date) {
     color: #6d6e71;
     line-height: 1.5rem;
@@ -321,6 +325,11 @@ ul {
 
 .post {
     padding: 0 2rem;
+}
+
+.post img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .post a {
@@ -442,6 +451,11 @@ footer a:hover {
         margin-bottom: 1.5rem;
     }
 
+    .post img {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
     img {
         width: 150px;
         height: 120px;
@@ -479,10 +493,13 @@ footer a:hover {
         display: block;
     }
 
-
     img {
         width: 110px;
         height: 90px;
+    }
+
+    .post_content h3 {
+        font-size: 1.2rem;
     }
 
     .post_content p {
