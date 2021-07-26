@@ -1,0 +1,56 @@
+nav a:first-of-type {
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: rgb(138, 201, 235);
+}
+
+nav a:first-of-type:hover,
+nav a:first-of-type:active {
+    color: #766aad;
+}
+
+#welcome > p {
+    font-size: 1.5rem;
+    margin: 0;
+    margin-top: 2rem;
+    text-align: center;
+
+}
+
+#welcome__title {
+    margin-top: 1rem;
+    font-size: 3rem;
+}
+
+.posts__post:not(:first-child) {
+    display: inline-block;
+    margin: 2rem 5%;
+    vertical-align: top;
+}
+
+@media (max-width: 1200px) {
+
+    .posts__post,
+    .posts__post:not(:first-child) {
+        display: block;
+        padding: 0;
+        padding-top: 1rem;
+        margin: 1.5rem auto !important;
+        width: 70%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 590px) {
+    #welcome > p,
+    #welcome__title {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .posts__post,
+    .posts__post:not(:first-child)  {
+        width: 90%;
+    }
+}

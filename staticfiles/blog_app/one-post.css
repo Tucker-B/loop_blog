@@ -1,0 +1,40 @@
+
+#container {
+    flex-grow: 1;
+    padding: 2rem 20%;
+    padding-top: 0;
+}
+
+.post_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.post_content > h3 {
+    font-size: 3rem;    
+}
+
+.post_content__entry-meta {
+    margin-bottom: 2rem;
+}
+
+#post_content__p {
+    color: black;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin: 3rem;
+}
+
+@media (max-width: 650px) {
+    #post_content__p {
+        width: 100%;
+    }
+}
+
+
