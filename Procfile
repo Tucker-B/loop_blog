@@ -1,0 +1,1 @@
+web: gunicorn loop_blog.wsgi
