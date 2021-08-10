@@ -12,7 +12,7 @@ from .forms import PostForm, TagForm
 
 def index(req):
     posts = Post.objects.order_by("-date")[:3]
-    imgHostUrl = "https://loopblog-images.s3.amazonaws.com/"
+    imgHostUrl = "https://d36oau4n9bd7tw.cloudfront.net/"
     try:
         return render(req, "blog_app/index.html", {
             "posts": posts,
@@ -23,7 +23,7 @@ def index(req):
 
 def all_posts(req):
     posts = Post.objects.all().order_by("-date")[:10]
-    imgHostUrl = "https://loopblog-images.s3.amazonaws.com/"
+    imgHostUrl = "https://d36oau4n9bd7tw.cloudfront.net/"
     try:
         return render(req, "blog_app/all-posts.html", {
             "posts": posts,
@@ -34,7 +34,7 @@ def all_posts(req):
 
 def specific_post(req, slug):
     post = Post.objects.get(slug=slug)
-    imgHostUrl = f"https://loopblog-images.s3.amazonaws.com/{post.image_name}"
+    imgHostUrl = f"https://d36oau4n9bd7tw.cloudfront.net/{post.image_name}"
     try:
         return render(req, "blog_app/one-post.html", {
             "specific_post": post,
@@ -143,7 +143,7 @@ def add_tag(req):
         raise Http404("Something went wrong") 
 
 def search(req):
-    imgHostUrl = "https://loopblog-images.s3.amazonaws.com/"
+    imgHostUrl = "https://d36oau4n9bd7tw.cloudfront.net/"
     
     slug = str(req.GET.get('title'))
     posts = Post.objects.filter(title__icontains=slug)
